@@ -1,6 +1,44 @@
 // 👉 Challenge 1: Somma di Numeri in un Array
 // Descrizione: Scrivi una funzione che prenda un array di numeri e ritorni la loro somma.
 
+const numbersList = [12, 45, 78, 34, 56, 89, 23, 67, 90, 14];
+console.log(numbersList)
+
+
+/**
+ * 
+ * @param {array} array array with numbers
+ * @returns {number} array's number sum
+ */
+// function sum (array) {
+//     let total = 0
+//     for (let i = 0; i < array.length; i++) {
+//         total += array[i]
+//     }
+//     return total
+// }
+
+// const totalSum = sum(numbersList)
+
+// console.log (totalSum)
+
+/**
+ * 
+ * @param {array} array array with numbers
+ * @returns {number} array's number sum
+ */
+function sum (array) {
+    let total = 0
+    array.forEach(number => {
+        total += number
+    })
+    return total
+}
+
+const totalSum = sum(numbersList)
+
+console.log(totalSum)
+
 // 👉 Challenge 2: Conta le Parole
 // Descrizione: Crea una funzione che prenda una stringa e restituisca il numero di parole in essa.
 
