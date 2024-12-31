@@ -4,7 +4,6 @@
 const numbersList = [12, 45, 78, 34, 56, 89, 23, 67, 90, 14];
 console.log(numbersList)
 
-
 /**
  * 
  * @param {array} array array with numbers
@@ -41,6 +40,24 @@ console.log(totalSum)
 
 // 👉 Challenge 2: Conta le Parole
 // Descrizione: Crea una funzione che prenda una stringa e restituisca il numero di parole in essa.
+
+const words = "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+console.log(words)
+
+/**
+ * 
+ * @param {string} strings strings to count
+ * @returns {number} how many words are in the variable
+ */
+function wordsCounter (strings) {
+    const wordsArray = strings.split(" ")
+    const totalWords = wordsArray.length
+    
+    return totalWords
+}
+
+const wordsNumber = wordsCounter(words)
+console.log(wordsNumber)
 
 // 👉 Challenge 3: Trova il Numero Maggiore
 // Descrizione: Scrivi una funzione che prenda un array di numeri e ritorni il più grande.
