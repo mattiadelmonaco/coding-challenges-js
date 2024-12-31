@@ -80,6 +80,21 @@ console.log(numberFound)
 // 👉 Challenge 4: Fattoriale
 // Descrizione: Scrivi una funzione che calcoli il fattoriale di un numero dato (es: 5! = 5 * 4 * 3 * 2 * 1 = 120).
 
+/**
+ * 
+ * @param {Number} n number to factorize
+ * @returns {Number} result
+ */
+function factorial(n) {
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result = result * i;
+    }
+    return result;
+}
+
+console.log(factorial(9));
+
 // 👉 Challenge 5: Fibonacci
 // Descrizione: Implementa una funzione che calcoli il valore dell’elemento N-esimo nella sequenza di Fibonacci (es: 0, 1, 1, 2, 3, 5, ...).
 
