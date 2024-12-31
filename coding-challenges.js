@@ -1,7 +1,7 @@
 // 👉 Challenge 1: Somma di Numeri in un Array
 // Descrizione: Scrivi una funzione che prenda un array di numeri e ritorni la loro somma.
 
-const numbersList = [12, 45, 78, 34, 56, 89, 23, 67, 90, 14];
+const numbersList = [12, 45, 78, 34, 56, 89, 23, 67, 90, 14]
 console.log(numbersList)
 
 /**
@@ -61,6 +61,21 @@ console.log(wordsNumber)
 
 // 👉 Challenge 3: Trova il Numero Maggiore
 // Descrizione: Scrivi una funzione che prenda un array di numeri e ritorni il più grande.
+
+const numbersList2 = [12, 45, 78, 34, 56, 89, 23, 67, 90, 14]
+
+function higherNumber (array) {
+    let higherNumberFound = 0
+    array.forEach (number => {
+        if (number > higherNumberFound) {
+            higherNumberFound = number
+        }
+    })
+    return higherNumberFound
+}
+
+const numberFound = higherNumber(numbersList2)
+console.log(numberFound)
 
 // 👉 Challenge 4: Fattoriale
 // Descrizione: Scrivi una funzione che calcoli il fattoriale di un numero dato (es: 5! = 5 * 4 * 3 * 2 * 1 = 120).
