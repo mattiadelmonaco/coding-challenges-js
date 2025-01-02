@@ -209,6 +209,53 @@ console.log(`La sottostringa più lunga è "${result.longestSubstring}", che ha 
 //     { categoria: 'verdura', nome: 'carota' }
 // ]
 
+const items = [
+    {   categoria: 'frutta', 
+        nome: 'mela' 
+    },
+    { 
+        categoria: 'frutta', 
+        nome: 'banana' 
+    },
+    { 
+        categoria: 'verdura', 
+        nome: 'carota' 
+    },
+    {
+        categoria: 'frutta', 
+        nome: 'pera' 
+    },
+    {
+        categoria: 'frutta', 
+        nome: 'arancia' 
+    },
+    {
+        categoria: 'verdura', 
+        nome: 'insalata' 
+    }
+]
+
+/**
+ * function to group in arrays objects based on a key
+ * 
+ * @param {array} array object's array to cicle
+ * @param {key} property name of key
+ * @returns {array} array of object based on a key
+ */
+function groupBy (array, property) {
+    let group = {}
+    for (let i = 0; i < array.length; i++) {
+        const key = array[i][property]
+    if (!group[key]) {
+        group[key] = []
+    }
+    group[key].push(array[i])
+}
+    return group
+}
+
+console.log (groupBy(items, "categoria"))
+
 // 👉 Challenge 11: Trova l’Oggetto con il Valore Massimo
 // Descrizione: Scrivi una funzione che trovi l’oggetto con il valore massimo per una proprietà specificata in un array di oggetti.
 // [
