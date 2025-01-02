@@ -5,6 +5,7 @@ const numbersList = [12, 45, 78, 34, 56, 89, 23, 67, 90, 14]
 console.log(numbersList)
 
 /**
+ * function to sum every number in an array
  * 
  * @param {array} array array with numbers
  * @returns {number} array's number sum
@@ -22,6 +23,7 @@ console.log(numbersList)
 // console.log (totalSum)
 
 /**
+ * function to sum every number in an array
  * 
  * @param {array} array array with numbers
  * @returns {number} array's number sum
@@ -45,6 +47,7 @@ const words = "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 console.log(words)
 
 /**
+ * function to count the number of words in a string
  * 
  * @param {string} strings strings to count
  * @returns {number} how many words are in the variable
@@ -64,6 +67,12 @@ console.log(wordsNumber)
 
 const numbersList2 = [12, 45, 78, 34, 56, 89, 23, 67, 90, 14]
 
+/**
+ * function to get hightest number in an array
+ * 
+ * @param {array} array array with numbers
+ * @returns {Number} hightest number present in array
+ */
 function higherNumber (array) {
     let higherNumberFound = 0
     array.forEach (number => {
@@ -81,6 +90,7 @@ console.log(numberFound)
 // Descrizione: Scrivi una funzione che calcoli il fattoriale di un numero dato (es: 5! = 5 * 4 * 3 * 2 * 1 = 120).
 
 /**
+ * function to factorize a number
  * 
  * @param {Number} n number to factorize
  * @returns {Number} result
@@ -101,6 +111,13 @@ console.log(factorial(9));
 // 👉 Challenge 6: Anagrammi
 // Descrizione: Crea una funzione che controlli se due stringhe sono anagrammi (composte dagli stessi caratteri in ordine diverso).
 
+/**
+ * function to check if two words are anagram
+ * 
+ * @param {string} string1 first string to confront
+ * @param {string} string2 second string to confront
+ * @returns {boolean} true if is anagram, else false - message to console.log write in function
+ */
 function areWordsAnagram (string1, string2) {
     if (string1.length !== string2.length) {
         console.log(`Le parole ${string1} e ${string2} non sono anagrammi in quanto parole di lugnhezza diversa`)
@@ -120,8 +137,6 @@ function areWordsAnagram (string1, string2) {
 }
 
 console.log(areWordsAnagram("Lorem", "MeOrl"))
-
-
 
 // 👉 Challenge 7: Rimuovi Duplicati
 // Descrizione: Scrivi una funzione che prenda un array e ritorni un nuovo array senza duplicati.
