@@ -165,6 +165,38 @@ console.log(arrayWithoutDuplicate(arrayWithDuplicate))
 // 👉 Challenge 8: Trova la Sotto-Stringa più Lunga senza Ripetizioni
 // Descrizione: Data una stringa, trova la lunghezza della sottostringa più lunga che non contiene caratteri ripetuti.
 
+const substring = "Mattiamkroj"
+
+/**
+ * function to get the longest substring in a string and his value
+ * 
+ * @param {string} string string to count
+ * @returns {string, number} return the longest substring and his value
+ */
+function longestSubstringWithoutRepeating (string) {
+    let currentSubstring = ""
+    let longestSubstring = ""
+
+    for (let i = 0; i < string.length; i++) {
+        if (currentSubstring.includes(string[i])) {
+            while (currentSubstring.includes(string[i])) {
+                currentSubstring = currentSubstring.slice(1);
+            }
+        } else {
+            currentSubstring += string[i]
+        }
+
+        if (currentSubstring.length > longestSubstring.length) {
+            longestSubstring = currentSubstring
+        }
+    }
+    return { longestSubstring, maxLength: longestSubstring.length}
+}
+
+const result = longestSubstringWithoutRepeating(substring)
+
+console.log(`La sottostringa più lunga è "${result.longestSubstring}", che ha una lunghezza di ${result.maxLength}`)
+
 // 👉 Challenge 9: Ordinamento Merge Sort
 // Descrizione: Implementa il Merge Sort, un algoritmo di ordinamento ricorsivo. Prendi un array non ordinato e ritorna un array ordinato.
 // Suggerimento: Dividi ricorsivamente l’array in metà fino a raggiungere singoli elementi, poi combina gli array ordinati.
