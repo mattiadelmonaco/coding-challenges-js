@@ -264,6 +264,34 @@ console.log (groupBy(items, "categoria"))
 //     { nome: 'Charlie', punteggio: 95 }
 // ]
 
+const gamers = 
+    [
+        { nome: 'Alice', punteggio: 90 },
+        { nome: 'Bob', punteggio: 85 },
+        { nome: 'Charlie', punteggio: 95 }
+    ]
+
+/**
+ * function to get the best gamer based on hightest score
+ * 
+ * @param {array} array array to cicle
+ * @param {key} key score's key
+ * @returns {object} best gamer's name and score
+ */
+    function maxScore (array, key) {
+    let hightestScore = 0
+    let bestGamer = {}
+    for (let i = 0; i < array.length; i++) {
+        if (array[i][key] > hightestScore) {
+            hightestScore = array[i][key]
+            bestGamer = array[i]
+        }
+    }
+    return bestGamer
+}
+
+console.log (maxScore(gamers, "punteggio"))
+
 // 👉 Challenge 12: Ordina Oggetti in Base a una Proprietà
 // Descrizione: Scrivi una funzione che ordini un array di oggetti in base a una proprietà specificata, in ordine crescente o decrescente.
 // [
