@@ -141,6 +141,27 @@ console.log(areWordsAnagram("Lorem", "MeOrl"))
 // 👉 Challenge 7: Rimuovi Duplicati
 // Descrizione: Scrivi una funzione che prenda un array e ritorni un nuovo array senza duplicati.
 
+const arrayWithDuplicate = ["Apple", "Banana", "Orange", "Grape", "Apple", "Kiwi", "Banana", "Pear", "Melon", "Grape"];
+
+/**
+ * function to remove duplicates from an array and get a new array without duplicates
+ * 
+ * @param {array} array array with duplicate
+ * @returns {array} array without duplicate
+ */
+function arrayWithoutDuplicate (array) {
+    const newArrayWithoutDuplicate = []
+        for (let i = 0; i < array.length; i++) {
+            if (!newArrayWithoutDuplicate.includes(array[i])) {
+                newArrayWithoutDuplicate.push(array[i])
+            }
+        }
+    return newArrayWithoutDuplicate
+}
+
+console.log(arrayWithoutDuplicate(arrayWithDuplicate))
+
+
 // 👉 Challenge 8: Trova la Sotto-Stringa più Lunga senza Ripetizioni
 // Descrizione: Data una stringa, trova la lunghezza della sottostringa più lunga che non contiene caratteri ripetuti.
 
