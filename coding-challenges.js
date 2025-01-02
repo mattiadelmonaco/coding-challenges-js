@@ -101,6 +101,28 @@ console.log(factorial(9));
 // 👉 Challenge 6: Anagrammi
 // Descrizione: Crea una funzione che controlli se due stringhe sono anagrammi (composte dagli stessi caratteri in ordine diverso).
 
+function areWordsAnagram (string1, string2) {
+    if (string1.length !== string2.length) {
+        console.log(`Le parole ${string1} e ${string2} non sono anagrammi in quanto parole di lugnhezza diversa`)
+        return false
+    }
+
+    const checkedString1 = string1.toLowerCase().split("").sort().join("")
+    const checkedString2 = string2.toLowerCase().split("").sort().join("")
+    const result = checkedString1 === checkedString2
+
+    if (result) {
+        console.log(`Le parole ${string1} e ${string2} SONO anagrammi`)
+    } else {
+        console.log(`Le parole ${string1} e ${string2} NON SONO anagrammi`)
+    } 
+    return result
+}
+
+console.log(areWordsAnagram("Lorem", "MeOrl"))
+
+
+
 // 👉 Challenge 7: Rimuovi Duplicati
 // Descrizione: Scrivi una funzione che prenda un array e ritorni un nuovo array senza duplicati.
 
