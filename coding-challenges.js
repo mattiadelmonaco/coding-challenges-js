@@ -299,3 +299,47 @@ console.log (maxScore(gamers, "punteggio"))
 //     { nome: 'Bob', eta: 22 },
 //     { nome: 'Charlie', eta: 28 }
 // ]
+
+const students = [
+    { nome: 'Alice', eta: 25 },
+    { nome: 'Bob', eta: 22 },
+    { nome: 'Charlie', eta: 28 }
+];
+
+/**
+ * function to order an array based on a key
+ * 
+ * @param {Object[]} array array to order
+ * @param {string} key key order based on
+ * @param {boolean} growing true = growing, false = decreasing
+ * @returns {Object[]} copy of array sorted by key
+ */
+function orderObjects(array, key, growing) {
+    const arrayCopied = [...array]
+
+    return arrayCopied.sort(function (a, b) {
+        if (a[key] < b[key]) {
+            if (growing) {
+                return -1
+            } else {
+                return 1
+            }
+        } else if (a[key] > b[key]) {
+            if (growing) {
+                return 1
+            } else {
+                return -1
+            }
+        }
+        return 0; // if key's value is equal
+    });
+}
+
+console.log("Array originale:")
+console.log(students)
+
+console.log("Ordinato per età crescente:")
+console.log(orderObjects(students, "eta", true))
+
+console.log("Ordinato per età decrescente:")
+console.log(orderObjects(students, "eta", false))
